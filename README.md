@@ -1,38 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# fdh-frontend
 
-## Getting Started
+FUN Developers Hubのフロントエンド。
 
-First, run the development server:
+## 必要な開発環境
+
+- Node.js@18.16.0
+- お好みのエディタ
+
+## 使用方法
+
+1. 下のコマンドを実行。
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. [http://localhost:3000](http://localhost:3000)を開く。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## コミットメッセージのルール
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+基本的には[Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)に従う。
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+フォーマットは`<種類>: <内容>`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+種類と意味は下の通り。
 
-## Learn More
+- `feat`: ユーザから見える機能の追加や変更。ユーザから見えない変更(例: ビルドスクリプトの変更)はこれに該当しない
+- `fix`: ユーザから見える機能のバグ修正。`feat`同様、ユーザから見えない変更は該当しない
+- `docs`: ドキュメントに関する変更(例: `README.md`の変更)
+- `style`: フォーマットしたときや、セミコロンの追加など、コードスタイルに関する変更
+- `refactor`: 動作の変更を伴わない変更(例: 変数名の変更)
+- `test`: テストコードに関する追加・変更
+- `chore`: ユーザに見えない変更(例: 設定ファイルの変更)
 
-To learn more about Next.js, take a look at the following resources:
+コミットメッセージの例:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `feat: サークルのページにアイコンを追加した`
+- `fix: 画像サイズによってスタイルがズレるため要素のサイズを固定した`
+- `chore: リンターとしてESLintを追加した`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+なお、コミットメッセージに`close #<issue id>`とつけることで該当番号のissueを閉じることができる。
 
-## Deploy on Vercel
+## ブランチ名のルール
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`<issue番号>/<変更内容(スペースをアンダーバーに)>`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+例:
+
+- `10/add_EventCardList_compnent`
+- `28/fix_join_form_bug`
