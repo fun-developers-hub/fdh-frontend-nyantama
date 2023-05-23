@@ -1,15 +1,22 @@
 import Head from "next/head";
+import MainContainer from "../components/Layout/MainContainer/MainContainer";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>FUN Developers Hub</title>
-        <meta name="description" content="Online platform for developer communities at FUN" />
+        <meta
+          name="description"
+          content="Online platform for developer communities at FUN"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>Hello! This is FUN Dev Hub.</main>
+
+      <main>
+        <MainContainer>Hello! This is FUN Dev Hub.</MainContainer>
+      </main>
     </>
   );
 }

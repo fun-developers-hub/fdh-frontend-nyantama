@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
-main {
+body {
   background-color: white;
-  max-width: 960px;
-  margin: 0 auto;
   font-family: "Noto Sans JP", sans-serif;
 }
