@@ -28,7 +28,6 @@
 .page-links {
   display: flex;
   gap: 16px;
-  /* height: 100%; */
 }
 
 .page-link {
