@@ -1,0 +1,48 @@
+.footer-outer {
+    margin-top: auto;
+    background-color: #F0F0F0;
+}
+
+.footer-inner {
+    height: 200px;
+    padding: 84px 0px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.site-title {
+    font-size: 40px;
+}
+
+.site-subtitle {
+    font-size: 15px;
+}
+
+.page-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-link {
+    font-size: 16px;
+}
+
+.information-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.information-link {
+    font-size: 14px;
+}
+
+.page-link:hover, .information-link:hover {
+    color: #808080;
+    transition: 0.15s;
+}
