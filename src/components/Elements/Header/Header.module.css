@@ -1,0 +1,44 @@
+.header-outer {
+  background-color: white;
+  top: 0;
+  left: 61px;
+  width: calc(100% - 2 * 61px);
+  height: 80px;
+  padding: 0 61px;
+  display: flex;
+  justify-content: space-between;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.site-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.site-subtitle {
+  font-size: 15px;
+}
+
+.page-links {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+
+.page-link {
+  display: grid;
+  padding: 0 1rem;
+  place-items: center;
+}
+
+.page-link:hover {
+  color: #909090;
+  transition: 0.15s;
+}
