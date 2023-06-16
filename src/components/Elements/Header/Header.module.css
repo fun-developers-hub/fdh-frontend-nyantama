@@ -19,6 +19,7 @@
 
 .site-title {
   font-size: 40px;
+  font-weight: bold;
 }
 
 .site-subtitle {
@@ -28,10 +29,16 @@
 .page-links {
   display: flex;
   gap: 16px;
+  height: 100%;
 }
 
 .page-link {
-  padding: 4px;
   display: grid;
+  padding: 0 1rem;
   place-items: center;
+}
+
+.page-link:hover {
+  color: #909090;
+  transition: 0.25s;
 }
