@@ -1,3 +1,5 @@
+import classes from "@/styles/EventStatus.module.css"
+
 type Status = "upcoming" | "active" | "finished"
 function toJapanese(status : Status) {
   switch (status) {
@@ -16,6 +18,8 @@ type Props = {
 
 export default function EventStatus({status}:Props) {
     return (
-      <p>hello, { toJapanese(status) }</p>
+      <div className={classes.eventStatus}>
+        <span className={ classes.circle }></span><p>{ toJapanese(status) }</p>
+      </div>
     )
 }

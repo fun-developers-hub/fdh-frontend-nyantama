@@ -1,0 +1,13 @@
+.eventStatus {
+    display: inline-flex;
+    align-items: center;
+}
+
+.circle {
+    margin: 14px 12px 12px 12px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: skyblue;
+}
