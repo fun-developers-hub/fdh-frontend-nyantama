@@ -1,6 +1,5 @@
 import Head from "next/head";
 import MainContainer from "../components/Layout/MainContainer/MainContainer";
-import EventStatus from "../components/Elements/EventStatus/EventStatus";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
 
       <main>
         <MainContainer>Hello! This is FUN Dev Hub.</MainContainer>
-        <EventStatus status="active" />
       </main>
     </>
   );

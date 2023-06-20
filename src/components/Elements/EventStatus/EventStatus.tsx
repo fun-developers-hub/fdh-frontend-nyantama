@@ -15,11 +15,38 @@ function toJapanese(status : Status) {
 type Props = {
   status : Status,
 }
+const EventStatus = ({status}:Props) => {
+  switch (status) {
+    case "upcoming":
+      return upcoming();
+    case "active":
+      return active();
+    case "finished":
+      return finished();
+  }
+}
+export default EventStatus;
 
-export default function EventStatus({status}:Props) {
-    return (
-      <div className={classes.eventStatus}>
-        <span className={ classes.circle }></span><p>{ toJapanese(status) }</p>
-      </div>
-    )
+const upcoming = ():JSX.Element => {
+  return (
+    <div className={classes.eventStatus}>
+      <span className={ classes.upcomingCircle }></span><p>{ toJapanese("upcoming") }</p>
+    </div>
+  );
+}
+
+const active = ():JSX.Element => {
+  return (
+    <div className={classes.eventStatus}>
+      <span className={ classes.activeCircle }></span><p>{ toJapanese("active") }</p>
+    </div>
+  );
+}
+
+const finished = ():JSX.Element => {
+  return (
+    <div className={classes.eventStatus}>
+      <span className={ classes.finishedCircle }></span><p>{ toJapanese("finished") }</p>
+    </div>
+  );
 }
