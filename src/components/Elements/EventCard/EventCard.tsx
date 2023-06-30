@@ -4,6 +4,7 @@ import styles from "./EventCard.module.css";
 
 type eventCardProps = {
     size: "small" | "medium";
+    status?: "upcoming" | "active" | "finished";
     icon_image_src: string;
     date_start: Date;
     date_end?: Date;
@@ -12,6 +13,7 @@ type eventCardProps = {
     alt?: string;
 };
 
+// デフォルトはmedium
 const sizeTemplate = { small: { width: 300, height: 300 } , medium: { width: 450, height: 400 } };
 
 const EventCard = ({
@@ -31,7 +33,6 @@ const EventCard = ({
             case "medium":
                 return sizeTemplate.medium;
             default:
-                // set 'medium' as default
                 return sizeTemplate.medium;
         }
     })();
@@ -44,9 +45,25 @@ const EventCard = ({
         }
     })();
 
+    const eventTextSizeStyle: string = (() => {
+        if (size === "small") {
+            return styles["event-text-small"];
+        } else {
+            return styles["event-text-medium"];
+        }
+    })();
+
+    const eventImageSizeStyle: string = (() => {
+        if (size === "small") {
+            return styles["event-image-small"];
+        } else {
+            return styles["event-image-medium"];
+        }
+    })();
+
     return (
         <div className={styles["event-card"]} style={{width: sizeCustom.width, height: sizeCustom.height}}>
-            <div className={styles["event-card-image"]}>
+            <div className={styles["event-image"]+' '+eventImageSizeStyle}>
                 <Image
                     src={icon_image_src}
                     alt={alt}
@@ -55,7 +72,7 @@ const EventCard = ({
                 />
             </div>
 
-            <div className={styles["event-card-information"]}>
+            <div className={styles["event-info"]}>
                 <CommunityIcon 
                     size={size}
                     icon_image_src="/fun.jpg"
@@ -64,10 +81,10 @@ const EventCard = ({
                 <div className={styles["event-name"]}>
                     {event}
                 </div>
-                <div className={styles["event-date"]}>
+                <div className={eventTextSizeStyle}>
                     {date}
                 </div>
-                <div className={styles["event-community"]}>
+                <div className={styles["event-community"]+' '+eventTextSizeStyle}>
                     by {community}
                 </div>
             </div>
