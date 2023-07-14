@@ -1,4 +1,4 @@
-import classes from "@/styles/EventStatus.module.css"
+import classes from "./EventStatus.module.css"
 
 type Status = "upcoming" | "active" | "finished"
 function toJapanese(status : Status) {
