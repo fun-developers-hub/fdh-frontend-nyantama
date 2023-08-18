@@ -4,7 +4,7 @@
 }
 
 .upcomingCircle {
-    margin: 14px 12px 12px 12px;
+    margin: 10px 8px 8px 8px;
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -13,7 +13,7 @@
 }
 
 .activeCircle {
-    margin: 14px 12px 12px 12px;
+    margin: 10px 8px 8px 8px;
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -22,7 +22,7 @@
 }
 
 .finishedCircle {
-    margin: 14px 12px 12px 12px;
+    margin: 10px 8px 8px 8px;
     display: inline-block;
     width: 10px;
     height: 10px;

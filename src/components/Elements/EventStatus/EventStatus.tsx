@@ -30,7 +30,7 @@ export default EventStatus;
 const upcoming = ():JSX.Element => {
   return (
     <div className={classes.eventStatus}>
-      <span className={ classes.upcomingCircle }></span><p>{ toJapanese("upcoming") }</p>
+      <span className={ classes.upcomingCircle }></span>{ toJapanese("upcoming") }
     </div>
   );
 }
@@ -38,7 +38,7 @@ const upcoming = ():JSX.Element => {
 const active = ():JSX.Element => {
   return (
     <div className={classes.eventStatus}>
-      <span className={ classes.activeCircle }></span><p>{ toJapanese("active") }</p>
+      <span className={ classes.activeCircle }></span>{ toJapanese("active") }
     </div>
   );
 }
@@ -46,7 +46,7 @@ const active = ():JSX.Element => {
 const finished = ():JSX.Element => {
   return (
     <div className={classes.eventStatus}>
-      <span className={ classes.finishedCircle }></span><p>{ toJapanese("finished") }</p>
+      <span className={ classes.finishedCircle }></span>{ toJapanese("finished") }
     </div>
   );
 }
