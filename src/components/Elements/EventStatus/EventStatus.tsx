@@ -1,6 +1,6 @@
 import classes from "./EventStatus.module.css"
 
-export type Status = "upcoming" | "active" | "finished"
+type Status = "upcoming" | "active" | "finished"
 function toJapanese(status : Status) {
   switch (status) {
     case "upcoming":
