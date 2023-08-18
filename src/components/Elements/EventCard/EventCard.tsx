@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CommunityIcon from "../CommunityIcon/CommunityIcon";
 import styles from "./EventCard.module.css";
+import EventStatus from "../EventStatus/EventStatus";
 
 type eventCardProps = {
     size: "small" | "medium";
@@ -21,6 +22,7 @@ const EventCard = ({
     icon_image_src,
     date_start,
     date_end = date_start,
+    status = "finished",
     event,
     community,
     alt = "",
@@ -78,6 +80,9 @@ const EventCard = ({
                     icon_image_src="/fun.jpg"
                     alt="FUN"
                 />
+                <div>
+                    <EventStatus status={status} />
+                </div>
                 <div className={styles["event-name"]}>
                     {event}
                 </div>
