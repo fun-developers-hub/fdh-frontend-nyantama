@@ -1,0 +1,31 @@
+.eventStatus {
+    display: inline-flex;
+    align-items: center;
+}
+
+.upcomingCircle {
+    margin: 14px 12px 12px 12px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #87C5F2;
+}
+
+.activeCircle {
+    margin: 14px 12px 12px 12px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #6CD77E;
+}
+
+.finishedCircle {
+    margin: 14px 12px 12px 12px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #F0F0F0;
+}
