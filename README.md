@@ -18,6 +18,9 @@ npm run dev
 
 2. [http://localhost:3000](http://localhost:3000)を開く。
 
+### Storybookの起動
+`$ npm run storybook`
+
 ## コミットメッセージのルール
 
 基本的には[Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)に従う。
